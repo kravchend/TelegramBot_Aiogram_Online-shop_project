@@ -6,6 +6,50 @@
     maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            font-weight: 200;
+            color: var(--tg-theme-text-color);
+            background-color: var(--tg-theme-bg-color);
+        }
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 70px;
+            margin: 30px auto;
+        }
+        button {
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            font-size: 28px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            background-color: var(--tg-theme-button-text-color);
+            color: var(--tg-theme-button-color);
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: var(--tg-theme-secondary-bg-color);
+        }
+    </style>
 </head>
 <body>
     <div id="main">
@@ -14,5 +58,6 @@
         <p>Lorem ipsun sit ampt, consectetur adipisicing elit.</p>
         <button id="buy">Купить</button>
     </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
