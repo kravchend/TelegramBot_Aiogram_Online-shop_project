@@ -16,21 +16,21 @@
 
 ## Технологии
 
-- Backend: Python (Django/Flask/FastAPI)  
-- Frontend: HTML, CSS, JavaScript (или любой фреймворк по вашему выбору)
+- Backend: Python 
+- Frontend: HTML, CSS, JavaScript
 - База данных: PostgreSQL/MySQL/SQLite
-- Система оплаты: интеграция с платёжными шлюзами (например, Stripe, ЮKassa или PayPal)
+- Система оплаты: интеграция с платёжными шлюзами
 
 ## Как запустить проект
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone <ссылка на ваш репозиторий>
+   git clone <https://github.com/kravchend/TelegramBot_Aiogram_Online-shop_project>
    ```
 
 2. Перейдите в директорию проекта и создайте виртуальное окружение:
    ```bash
-   cd <папка проекта>
+   cd <TelegramBot_Aiogram_Online-shop_project>
    python -m venv venv
    source venv/bin/activate
    ```
@@ -40,19 +40,7 @@
    pip install -r requirements.txt
    ```
 
-4. Выполните миграции базы данных (если используется Django/Flask/FastAPI):
-   ```bash
-   # Пример для Django:
-   python manage.py migrate
-   ```
-
-5. Запустите сервер разработки:
-   ```bash
-   # Пример для Django:
-   python manage.py runserver
-   ```
-
-6. Откройте браузер и перейдите по адресу http://localhost:8000/
+4.Откройте браузер и перейдите по адресу https://kravchend.github.io/TelegramBot_Aiogram_Online-shop_project/
 
 ## Настройка оплаты
 
@@ -60,7 +48,7 @@
 
 ## Контакты
 
-По вопросам пишите на почту: <ваша почта>
+По вопросам пишите на почту: <kravchend@gmail.com>
 
 ---
 

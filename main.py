@@ -7,7 +7,7 @@ from config import TOKEN_KEY
 async def start(message: types.Message):
     markup = ReplyKeyboardMarkup(
         keyboard=[
-            [KeyboardButton(text="Открыть веб страницу", web_app=WebAppInfo(url="https://kravshenko.de"))]
+            [KeyboardButton(text="Открыть веб страницу", web_app=WebAppInfo(url="https://kravchend.github.io/TelegramBot_Aiogram_Online-shop_project/"))]
         ],
         resize_keyboard=True
     )
