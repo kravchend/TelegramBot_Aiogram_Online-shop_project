@@ -1,0 +1,28 @@
+from aiogram import F, types, Router
+from aiogram.filters import CommandStart, Command, or_f
+from filters.chat_type import ChatTypeFilter
+
+user_private_router = Router()
+
+
+@user_private_router.message(CommandStart())
+async def start_cmd(message: types.Message):
+    await message.answer(f'Здравствуйте {message.from_user.full_name}, я виртуальный помощник!')
+
+
+@user_private_router.message(or_f(Command("menu"), (F.text.lower() == "меню")))
+async def menu_cmd(message: types.Message):
+    await message.answer("Вот меню:")
+
+
+@user_private_router.message(F.text.lower() == "о нас")
+@user_private_router.message(Command("payment"))
+async def payment_cmd(message: types.Message):
+    await message.answer("Варианты оплаты:")
+
+
+@user_private_router.message((F.text.lower().contains('доставк')) | (F.text.lower() == 'варианты доставки'))
+@user_private_router.message(Command("shipping"))
+async def menu_cmd(message: types.Message):
+    await message.answer("Варианты доставки:")
+
