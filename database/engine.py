@@ -1,17 +1,21 @@
 import os
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from dotenv import load_dotenv
 
 from database.models import Base
 
-# from .env file:
-# DB_LITE=sqlite+aiosqlite:///my_base.db
-# DB_URL=postgresql+asyncpg://login:password@localhost:5432/db_name
+load_dotenv()
 
-# engine = create_async_engine(os.getenv('DB_LITE'), echo=True)
+DATABASE_URL = os.getenv('DB_URL')
 
-engine = create_async_engine(os.getenv('DB_URL'), echo=True)
+if not DATABASE_URL:
+    raise ValueError("DATABASE_URL не найдена в переменных окружения")
 
-session_maker = async_sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)
+engine = create_async_engine(DATABASE_URL, echo=True)
+
+session_maker = async_sessionmaker(
+    bind=engine, class_=AsyncSession, expire_on_commit=False
+)
 
 
 async def create_db():
