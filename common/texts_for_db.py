@@ -1,3 +1,4 @@
+from aiogram.types import message
 from aiogram.utils.formatting import Bold, as_list, as_marked_section
 
 categories = ['Еда', 'Напитки']

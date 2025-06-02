@@ -205,9 +205,6 @@ async def add_name(message: types.Message, state: FSMContext):
     if message.text == "." and AddProduct.product_for_change:
         await state.update_data(name=AddProduct.product_for_change.name)
     else:
-        # Здесь можно сделать какую либо дополнительную проверку
-        # и выйти из хендлера не меняя состояние с отправкой соответствующего сообщения
-        # например:
         if 4 >= len(message.text) >= 150:
             await message.answer(
                 "Название товара не должно превышать 150 символов\nили быть менее 5ти символов. \n Введите заново"
