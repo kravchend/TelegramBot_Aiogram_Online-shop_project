@@ -25,7 +25,7 @@
 ## Технологии
 
 - Backend: Python 3.13+
-- [aiogram 3.x](https://docs.aiogram.dev)
+- [aiogram 3.20.0](https://docs.aiogram.dev)
 - База данных: PostgreSQL (через SQLAlchemy – асинхронный режим)
 - [asyncpg](https://github.com/MagicStack/asyncpg) (адаптер PostgreSQL)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
